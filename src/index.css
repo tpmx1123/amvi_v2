@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+  --color-primary: #1A3C3A;
+  --color-secondary: #0f1414;
+  --color-accent-red: #D63030;
+  --color-accent-yellow: #C9A227;
+  --color-accent-gold: #C9A227;
+  --color-bg: #f8f9f8;
+  --color-cream: #fafaf9;
+  --color-gold-light: #e8d5a3;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply font-sans bg-bg text-secondary min-h-screen min-w-[320px] m-0;
+}
+
+h1, h2 {
+  @apply font-serif;
+}
+
+#root {
+  @apply w-full min-h-screen m-0 p-0;
+}
+
+.section-eyebrow {
+  @apply inline-flex items-center gap-3 mb-3 md:mb-4;
+}
+.section-eyebrow-line {
+  @apply h-px w-10 bg-accent-gold/70;
+}
+.section-eyebrow-text {
+  @apply uppercase tracking-[0.2em] font-semibold text-[10px] md:text-xs text-accent-gold;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.section-subtitle {
+  @apply text-secondary/70 text-sm md:text-base max-w-xl mx-auto leading-relaxed mt-2;
+}
+
+.premium-card {
+  @apply rounded-2xl overflow-hidden border border-primary/10 bg-white shadow-sm transition-all duration-300;
+  box-shadow: 0 1px 3px rgba(26, 60, 58, 0.06);
+}
+.premium-card:hover {
+  @apply border-accent-gold/30 -translate-y-0.5;
+  box-shadow: 0 12px 28px rgba(26, 60, 58, 0.12), 0 0 0 1px rgba(201, 162, 39, 0.08);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
