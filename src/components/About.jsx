@@ -1,59 +1,93 @@
+// Set your About section image URL here (right column)
+const ABOUT_IMAGE_URL =
+  'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773048242/unnamed_e3ru2d.jpg';
 
-
-// YouTube embed URL (video: https://youtu.be/Dz9MmBaAdwg)
-const ABOUT_VIDEO_URL = 'https://www.youtube.com/embed/Dz9MmBaAdwg';
+const stats = [
+  { value: '1 TON+/hr', label: 'Processing Capacity' },
+  { value: '30+ SKUs', label: 'Product Range' },
+  { value: '100%', label: 'Direct Manufacturer' },
+  { value: 'B2B focused', label: 'Exclusively Trade' },
+];
 
 export default function About() {
   return (
-    <section id="about" className="py-12 md:py-16 px-4 sm:px-6 md:px-10 overflow-hidden bg-white font-sans">
+    <section
+      id="about"
+      className="py-12 md:py-16 px-4 sm:px-6 md:px-10 overflow-hidden bg-white font-sans"
+    >
       <div className="max-w-7xl mx-auto">
-        {/* --- HEADER --- */}
-        <div className="text-center mb-12 md:mb-16">
-          <div className="section-eyebrow justify-center">
-            <span className="section-eyebrow-line" />
-            <span className="section-eyebrow-text">Our Story</span>
-          </div>
-          <h2 className="section-title text-primary mb-2">
-            About AMVI
-          </h2>
-          <p className="section-subtitle">
-            Excellence in Food Exports Since 2008
-          </p>
-        </div>
-
-        {/* --- TWO COLUMNS: Content + Video --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left: Content */}
-          <div className="space-y-5 text-left">
-            <p className="text-secondary font-semibold text-base md:text-lg leading-relaxed">
-              AMVI is a premier food export company delivering the finest vegetables, dehydrated powders, and ready-to-cook products to markets across the globe.
+          <div className="order-2 lg:order-1">
+            <div className="section-eyebrow">
+              <span className="section-eyebrow-line" />
+              <span className="section-eyebrow-text">Our Story</span>
+            </div>
+            <h2 className="section-title text-primary mb-4">About AMVI Foods</h2>
+            <p
+              className="text-secondary font-serif text-lg md:text-xl italic leading-relaxed mb-6"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              &ldquo;We don&apos;t source and ship. We grow, process, and export
+              — from Konaseema&apos;s soil to your facility.&rdquo;
             </p>
-            <p className="text-secondary/85 text-sm md:text-base leading-relaxed">
-              With over 15 years of experience, we partner directly with certified farms in Konaseema to ensure every product meets rigorous international quality standards.
-            </p>
+
+            <div className="space-y-4 text-secondary/85 text-sm md:text-base leading-relaxed">
+              <p>
+                AMVI Foods is a manufacturer and direct exporter of dehydrated
+                vegetables, fruits, and powders based in Konaseema, Andhra
+                Pradesh. Our model is simple: own the source, own the process,
+                deliver directly to the buyer.
+              </p>
+              <p>
+                Our facility runs a dedicated dehydration assembly line
+                processing over 1 Ton per hour — from raw vegetable intake
+                through multi-stage washing, precision drying, milling, and
+                export-grade packaging. Every batch is documented, tested, and
+                cleared before it leaves our floor.
+              </p>
+              <p>
+                We supply food manufacturers, wholesale distributors, RTE
+                brands, spice companies, and nutraceutical producers —
+                globally. Whether you need weekly bulk supply or a custom private
+                label product, we are built for it.
+              </p>
+            </div>
           </div>
 
-          {/* Right: Video */}
-          <div className="w-full aspect-video rounded-2xl overflow-hidden bg-bg border border-primary/10 shadow-xl shadow-primary/5">
-            {ABOUT_VIDEO_URL ? (
-              <iframe
-                src={ABOUT_VIDEO_URL}
-                title="About AMVI"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            ) : (
-              <div className="w-full h-full flex flex-col items-center justify-center text-secondary/50 p-8 text-center">
-                <div className="text-5xl mb-3">▶</div>
-                <p className="text-sm font-medium">Video placeholder</p>
-                <p className="text-xs mt-1">Set ABOUT_VIDEO_URL in About.jsx to show your video</p>
-              </div>
-            )}
+          {/* Right: Image + Stats below */}
+          <div className="order-1 lg:order-2 space-y-6">
+            <div className="rounded-2xl overflow-hidden bg-cream/50 border border-primary/10 shadow-lg">
+              {ABOUT_IMAGE_URL ? (
+                <img
+                  src={ABOUT_IMAGE_URL}
+                  alt="AMVI Foods — Konaseema facility and team"
+                  className="w-full h-auto object-cover"
+                />
+              ) : (
+                <div className="aspect-4/5 flex items-center justify-center text-secondary/40">
+                  <span className="text-sm">About image</span>
+                </div>
+              )}
+            </div>
+            {/* Stats below image */}
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((item) => (
+                <div
+                  key={item.label}
+                  className="p-4 rounded-xl bg-cream/70 border border-primary/10"
+                >
+                  <p className="font-bold text-primary text-lg md:text-xl">
+                    {item.value}
+                  </p>
+                  <p className="text-secondary/70 text-xs md:text-sm font-medium mt-0.5">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
-        
       </div>
     </section>
   );

@@ -1,47 +1,67 @@
-const LOGO_URL = 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1772605073/Screenshot_2026-03-04_114703-removebg-preview_exaaet.png';
-const HERO_BG = 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773145354/ChatGPT_Image_Mar_10_2026_03_44_43_PM_swsor7.png';
+const HERO_BG =
+  'https://i.pinimg.com/1200x/c5/c9/4e/c5c94e59aa8fd075e78c640c6e5e1533.jpg';
 
-export default function Home() {
+export default function Hero() {
   return (
-    <div className="relative min-h-screen font-sans">
-      
+    <section
+      id="home"
+      className="relative min-h-screen flex flex-col justify-center font-sans overflow-hidden"
+      style={{
+        backgroundImage: `url(${HERO_BG})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      {/* Dark overlay for text readability */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.55)' }}
+      />
 
-      {/* --- HERO SECTION --- */}
-      <section 
-        id="home" 
-        className="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(${HERO_BG})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="max-w-4xl z-10">
-          <h1 
-            className="text-white mb-4"
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "clamp(2.5rem, 8vw, 5rem)",
-              lineHeight: 1.1,
-            }}
-          >
-            Fresh From <br />
-            <span className="italic font-light">Farm to the World</span>
-          </h1>
-          
-          <p className="text-white/90 text-sm md:text-lg max-w-3xl mx-auto mb-8 font-light leading-relaxed">
-            Delivering premium quality fresh fruits, dehydrated vegetables, and dehydrated powders to global markets with unmatched freshness, purity, and reliability.
-          </p>
+      {/* Top right: badge only */}
+      <div className="absolute top-0 left-0 right-0 z-10 flex items-start px-6 pt-8 md:px-12 md:pt-28">
+        <div className="rounded-full border border-white  px-4 py-2 ">
+          <span className="text-[10px] md:text-xs font-semibold tracking-[0.25em] text-white uppercase">
+            Purely Healthy
+          </span>
+        </div>
+      </div>
 
-          <a 
-            href="#products" 
-            className="inline-flex items-center gap-2 bg-white text-[#FF4D30] px-8 py-4 rounded-md font-bold text-lg hover:bg-gray-100 transition-all group"
+      {/* Main content: heading + paragraph, left-aligned, pushed down */}
+      <div className="relative z-10 max-w-7xl px-6 md:px-12 lg:px-16 pt-40 md:pt-48 pb-20">
+        <h1
+          className="text-white font-bold uppercase leading-[1.15] tracking-tight mb-4"
+          style={{
+            fontFamily: "'Montserrat', sans-serif",
+            fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+          }}
+        >
+          Konaseema Farms 
+          <br />
+          to Global Markets
+        </h1>
+        <p className="text-white text-xs md:text-sm max-w-2xl leading-relaxed opacity-95">
+        AMVI Foods manufactures 30+ dehydrated products from the Godavari delta — sourced, processed, and packed at our Konaseema facility running at over 1 Ton per hour. We supply food manufacturers, wholesale distributors, and private label brands globally. No intermediaries. No supply chain guesswork
+        </p>
+
+        {/* CTAs: solid button + text link */}
+        <div className="flex flex-wrap items-center gap-6 mt-6">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 bg-accent-gold text-white font-bold text-sm px-6 py-3.5 rounded-full hover:bg-accent-yellow/90 transition-colors no-underline"
           >
-            Explore Our Products
-            <span className="group-hover:translate-x-1 transition-transform">→</span>
+            Request a Quote
+            <span aria-hidden>→</span>
+          </a>
+          <a
+            href="#products"
+            className="inline-flex items-center gap-2 text-white/85 font-medium text-sm hover:text-white transition-colors no-underline"
+          >
+            Browse Products
+            <span aria-hidden>→</span>
           </a>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

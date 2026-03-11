@@ -1,23 +1,18 @@
 const cards = [
   {
-    icon: '🔬',
-    title: 'Rigorous Quality Control',
-    desc: 'Every batch tested for purity and safety, from farm to package.',
+    number: '01',
+    title: 'Assembly-Line at 1 TON+ Per Hour',
+    desc: 'Fresh vegetables and fruits processed at over 1 ton per hour, while our advanced dehydration and micro-grinding line produces up to 1 ton of premium powders per day.'
   },
   {
-    icon: '💡',
-    title: 'Innovative Drying Technology',
-    desc: 'Preserves natural taste, colour, and full nutritional value.',
+    number: '02',
+    title: 'Konaseema — Where Big Brands Source From',
+    desc: 'The major FMCG companies source raw material from this very delta. AMVI is headquartered here. You get the origin directly, not through a reseller chain.',
   },
   {
-    icon: '🛡️',
-    title: 'Strict Safety & Hygiene',
-    desc: 'National and international standards followed across every facility.',
-  },
-  {
-    icon: '🌱',
-    title: 'Sustainable Sourcing',
-    desc: 'Supporting local Konaseema farmers while delivering global-quality produce.',
+    number: '03',
+    title: 'Manufacturer to Buyer — Zero Layers',
+    desc: 'Direct pricing, real traceability, batch-level documentation. One conversation with the people who actually make the product.',
   },
 ];
 
@@ -38,20 +33,17 @@ export default function Why() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {cards.map((c) => (
             <div
-              key={c.title}
-              className="group premium-card relative flex flex-col h-full p-6 lg:p-7"
+              key={c.number}
+              className="group relative flex flex-col h-full p-6 lg:p-7 rounded-3xl bg-white border border-primary/10 shadow-sm transition-all duration-300 hover:bg-primary hover:border-primary hover:shadow-md"
             >
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-accent-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-t-2xl" />
-              <div className="w-12 h-12 lg:w-14 lg:h-14 mb-4 rounded-xl bg-primary/5 border border-primary/10 flex items-center justify-center text-2xl lg:text-3xl group-hover:bg-primary/10 group-hover:border-accent-gold/30 transition-all duration-300">
-                {c.icon}
-              </div>
-              <h3 className="font-serif text-base lg:text-lg font-bold mb-2 text-secondary group-hover:text-primary transition-colors duration-300">
-                {c.title}
+              <h3 className=" text-base lg:text-lg font-bold  tracking-tight mb-3 text-secondary group-hover:text-white transition-colors duration-300 flex items-baseline gap-2 flex-wrap">
+                <span className="text-accent-gold group-hover:text-accent-gold/90 text-monsterrat">{c.number}</span>
+                <span className="text-monsterrat">{c.title}</span>
               </h3>
-              <p className="text-sm leading-relaxed text-secondary/80 flex-1">
+              <p className="text-sm leading-relaxed text-secondary/80 group-hover:text-white/90 flex-1 transition-colors duration-300">
                 {c.desc}
               </p>
             </div>

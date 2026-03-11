@@ -13,6 +13,10 @@
   --color-gold-light: #e8d5a3;
 }
 
+:root {
+  --primary: var(--color-primary);
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -63,4 +67,138 @@ h1, h2 {
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Our Process: step reveal and icon pop */
+@keyframes processStepReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes processIconPop {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes processBadgePop {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes processTextFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes processLineDraw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.process-step-visible .process-step-badge {
+  animation: processBadgePop 0.45s ease-out forwards;
+}
+.process-step-visible .process-step-icon-wrap {
+  animation: processIconPop 0.5s ease-out 0.1s forwards;
+}
+.process-step-visible .process-step-label {
+  animation: processTextFade 0.4s ease-out 0.25s forwards;
+}
+.process-step-visible .process-step-title {
+  animation: processTextFade 0.4s ease-out 0.35s forwards;
+}
+.process-step-visible .process-step-desc {
+  animation: processTextFade 0.5s ease-out 0.45s forwards;
+}
+.process-step-visible .process-step-container {
+  animation: processStepReveal 0.5s ease-out forwards;
+}
+
+.process-step .process-step-badge,
+.process-step .process-step-icon-wrap,
+.process-step .process-step-label,
+.process-step .process-step-title,
+.process-step .process-step-desc {
+  opacity: 0;
+}
+.process-step-visible .process-step-badge,
+.process-step-visible .process-step-icon-wrap,
+.process-step-visible .process-step-label,
+.process-step-visible .process-step-title,
+.process-step-visible .process-step-desc {
+  opacity: 1;
+}
+
+/* Dynamic timeline: dotted line draw + flow dots */
+@keyframes draw-line {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+@keyframes flow-dots {
+  from { background-position: 0 center; }
+  to { background-position: 40px center; }
+}
+@keyframes flow-dots-vertical {
+  from { background-position: center 0; }
+  to { background-position: center 20px; }
+}
+@keyframes timeline-fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-draw-line {
+  animation: draw-line 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+}
+.animate-flow-dots {
+  animation: flow-dots 2s linear infinite;
+}
+.animate-flow-dots-vertical {
+  animation: flow-dots-vertical 2s linear infinite;
+}
+.animate-timeline-fade-in {
+  animation: timeline-fade-in 1s ease-out forwards;
+}
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Certification marquee */
+@keyframes certification-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.certification-marquee {
+  animation: certification-marquee 25s linear infinite;
 }

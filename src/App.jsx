@@ -2,10 +2,13 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Categories from './components/Categories';
-import Products from './components/Products';
-import FreshVeg from './components/FreshVeg';
-import ReadyToCook from './components/ReadyToCook';
+import HeroProduct from './components/HeroProduct';
 import Why from './components/Why';
+import WhatWe from './components/WhatWe';
+import OurProcess from './components/OurProcess';
+import OurCertification from './components/OurCertification';
+import GlobalReach from './components/GlobalReach';
+import ProcessingCapacity from './components/ProcessingCapacity';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -15,12 +18,15 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Categories />
-        <FreshVeg />
-        <Products />
-        <ReadyToCook />
         <Why />
+        <Categories />
+        <HeroProduct />
+        <WhatWe />
+        <ProcessingCapacity />
+        <About />
+        <OurProcess />
+        <OurCertification />
+        <GlobalReach />
         <Contact />
         <Footer />
       </main>
