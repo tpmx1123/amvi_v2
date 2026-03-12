@@ -92,9 +92,9 @@ export default function Categories() {
                   {cat.features.map((feature) => (
                     <li
                       key={feature}
-                      className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-primary/90"
+                      className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-accent-gold"
                     >
-                      <span className="w-1 h-1 rounded-full bg-primary" />
+                      <span className="w-1 h-1 rounded-full bg-accent-gold" />
                       {feature}
                     </li>
                   ))}
