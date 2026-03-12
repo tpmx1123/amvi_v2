@@ -18,17 +18,13 @@ export default function Hero() {
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.55)' }}
       />
 
-      {/* Top right: badge only */}
-      <div className="absolute top-0 left-0 right-0 z-10 flex items-start px-6 pt-8 md:px-12 md:pt-28">
-        <div className="rounded-full border border-white  px-4 py-2 ">
-          <span className="text-[10px] md:text-xs font-semibold tracking-[0.25em] text-white uppercase">
+      {/* Main content: heading + paragraph, left-aligned, pushed down */}
+      <div className="relative z-10 max-w-7xl px-6 md:px-12 lg:px-16 pt-40 md:pt-36 pb-20">
+      <div className="rounded-full border border-white  px-4 py-2  mb-5 w-fit ">
+          <span className="text-[8px] md:text-xs font-semibold tracking-[0.1em] text-white uppercase">
             Purely Healthy
           </span>
         </div>
-      </div>
-
-      {/* Main content: heading + paragraph, left-aligned, pushed down */}
-      <div className="relative z-10 max-w-7xl px-6 md:px-12 lg:px-16 pt-40 md:pt-48 pb-20">
         <h1
           className="text-white font-bold uppercase leading-[1.15] tracking-tight mb-4"
           style={{
@@ -41,7 +37,7 @@ export default function Hero() {
           to Global Markets
         </h1>
         <p className="text-white text-xs md:text-sm max-w-2xl leading-relaxed opacity-95">
-        AMVI Foods manufactures 30+ dehydrated products from the Godavari delta — sourced, processed, and packed at our Konaseema facility running at over 1 Ton per hour. We supply food manufacturers, wholesale distributors, and private label brands globally. No intermediaries. No supply chain guesswork
+        AMVI Foods produces 30+ dehydrated powder products from the Godavari delta, processed at our Konaseema facility with a capacity of over 1 ton per day. We also supply fresh vegetables, fruits (over 1 ton per hour), and ready-to-cook products. Serving food manufacturers, wholesale distributors, and private label brands globally — with no intermediaries and no supply chain guesswork.
         </p>
 
         {/* CTAs: solid button + text link */}

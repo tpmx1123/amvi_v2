@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 const CATEGORIES = [
-  { id: 'fresh', label: 'Fruits and Vegetable Fresh' },
-  { id: 'dehydrated', label: 'Dehydrated Powder' },
-  { id: 'ready-to-cook', label: 'Ready to Cook' },
+  { id: 'fresh', label: 'Fresh Harvest' },
+  { id: 'dehydrated', label: 'Dehydrated Suite' },
+  { id: 'ready-to-cook', label: 'Culinary Instant' },
 ];
 
 const PRODUCTS = {
@@ -65,12 +65,10 @@ export default function HeroProduct() {
   const products = PRODUCTS[activeCategory] || [];
 
   return (
-    <section
-      id="products"
-      className="py-12 md:py-16 px-4 sm:px-6 md:px-10 overflow-hidden bg-cream/50 font-sans"
-    >
+    <section id="products" className="py-10 md:py-12 px-4 sm:px-6 md:px-10 overflow-hidden bg-cream font-sans">
       <div className="max-w-7xl mx-auto">
-        {/* Header row: title left, filters right */}
+
+        {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8 md:mb-10">
           <div>
             <div className="section-eyebrow mb-3">
@@ -78,23 +76,21 @@ export default function HeroProduct() {
               <span className="section-eyebrow-text">Our Product Range</span>
             </div>
             <h2 className="text-secondary font-bold text-2xl md:text-3xl lg:text-4xl leading-tight">
-              <span className="font-sans">30+ Products.</span>
+              <span className="font-serif ">30+ Products.</span>
               <br />
-              <span className="font-serif italic text-primary">Three Categories.</span>
+              <span className="font-serif  text-primary">Three Categories.</span>
             </h2>
           </div>
 
-          {/* Filter tabs - right side */}
-          <div className="flex flex-wrap gap-0 rounded-xl overflow-hidden border border-primary/15 bg-white shadow-sm lg:shrink-0">
+          <div className="flex bg-white shadow-xl shadow-black/5 rounded-full p-1.5 border border-[#091F15]/5">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
-                type="button"
                 onClick={() => setActiveCategory(cat.id)}
-                className={`py-3.5 px-4 md:px-5 text-sm font-semibold transition-all duration-300 border-r border-primary/10 last:border-r-0 whitespace-nowrap ${
-                  activeCategory === cat.id
-                    ? 'bg-primary text-white'
-                    : 'bg-white text-secondary hover:bg-primary hover:text-white'
+                className={`px-6 py-3 rounded-full text-[10px] md:text-xs tracking-widest uppercase font-bold transition-all duration-500 ${
+                  activeCategory === cat.id 
+                  ? 'bg-[#091F15] text-white shadow-lg shadow-[#091F15]/20' 
+                  : 'text-[#091F15]/40 hover:text-[#091F15]'
                 }`}
               >
                 {cat.label}
@@ -103,22 +99,40 @@ export default function HeroProduct() {
           </div>
         </div>
 
-        {/* Product grid - 3×5 style: icon top center, title + description centered */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 ">
+        {/* Product grid – theme colors + blurred hover overlay */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-primary/5 rounded-xl overflow-hidden">
           {products.map((product) => (
             <div
               key={`${activeCategory}-${product.name}`}
-              className="group bg-white p-5 lg:p-6 flex flex-col items-center text-center rounded-lg border border-primary/10 shadow-sm transition-all duration-300 hover:bg-primary hover:border-primary hover:shadow-md"
+              className="group relative min-h-[90px] sm:min-h-[100px] md:min-h-[140px] flex flex-col items-center justify-center p-4 bg-white overflow-hidden transition-all duration-300 hover:bg-primary/5"
             >
-              <div className="w-12 h-12 lg:w-14 lg:h-14 mb-3 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-2xl lg:text-3xl shrink-0">
-                {product.icon}
+              {/* Invisible focusable layer so tap on mobile reveals overlay (group-focus-within) */}
+              <span
+                tabIndex={0}
+                className="absolute inset-0 z-10 focus:outline-none"
+                aria-label={`${product.name}, ${product.useCases}`}
+              />
+              {/* Default: icon + name */}
+              <div className="flex flex-col items-center text-center transition-all duration-300 group-hover:opacity-0 group-hover:scale-95 group-focus-within:opacity-0 group-focus-within:scale-95 relative z-0">
+                <div className="text-2xl sm:text-3xl md:text-4xl mb-2 transition-all duration-500">
+                  {product.icon}
+                </div>
+                <h3 className="text-secondary font-bold text-[11px] sm:text-xs md:text-sm tracking-tight uppercase">
+                  {product.name}
+                </h3>
               </div>
-              <h3 className="font-bold text-secondary text-sm lg:text-base mb-2 group-hover:text-white transition-colors duration-300">
-                {product.name}
-              </h3>
-              <p className="text-secondary/60 text-xs lg:text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300">
-                {product.useCases}
-              </p>
+
+              {/* Hover / focus (mobile tap): blurred overlay + use cases (theme primary) */}
+              <div className="absolute inset-0 z-20 flex items-center justify-center p-4 opacity-0 backdrop-blur-md bg-primary/85 transition-all duration-400 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                <div className="text-center">
+                  <p className="text-accent-gold text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold mb-1.5">
+                    Export Grade
+                  </p>
+                  <p className="text-white/95 text-[10px] sm:text-xs leading-relaxed font-light">
+                    {product.useCases}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

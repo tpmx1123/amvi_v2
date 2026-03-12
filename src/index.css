@@ -189,6 +189,43 @@ h1, h2 {
   animation: spin-slow 12s linear infinite;
 }
 
+/* Navbar right drawer */
+.nav-drawer-backdrop {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-drawer-backdrop.nav-drawer-backdrop--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.nav-drawer-backdrop:not(.nav-drawer-backdrop--open) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-drawer-panel {
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.nav-drawer-panel.nav-drawer-panel--open {
+  transform: translateX(0);
+}
+.nav-drawer-panel:not(.nav-drawer-panel--open) {
+  transform: translateX(100%);
+}
+
+/* Hamburger to X */
+.nav-hamburger-line {
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+.nav-hamburger--open .nav-hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-hamburger--open .nav-hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.nav-hamburger--open .nav-hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Certification marquee */
 @keyframes certification-marquee {
   from {
@@ -201,4 +238,71 @@ h1, h2 {
 
 .certification-marquee {
   animation: certification-marquee 25s linear infinite;
+}
+
+@keyframes capacity-image-reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.98) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.capacity-image-visible .capacity-image {
+  animation: capacity-image-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Navbar overlay menu – element animations */
+@keyframes nav-menu-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav-menu-logo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes nav-menu-right-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-menu--open .nav-menu-item {
+  animation: nav-menu-item-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.nav-menu--open .nav-menu-logo {
+  animation: nav-menu-logo-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+
+.nav-menu--open .nav-menu-right {
+  animation: nav-menu-right-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+}
+
+.nav-menu-item,
+.nav-menu-logo,
+.nav-menu-right {
+  opacity: 0;
 }

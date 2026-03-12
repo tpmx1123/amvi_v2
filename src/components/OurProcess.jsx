@@ -130,7 +130,7 @@ export default function OurProcess() {
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-10 md:mb-14">
+        <div className="text-center mb-10 md:mb-8">
           <div className="section-eyebrow justify-center">
             <span className="section-eyebrow-line" />
             <span className="section-eyebrow-text">Our Process</span>
