@@ -22,7 +22,7 @@ const PRODUCTS = {
     { name: 'Fresh Ginger', icon: '🫚', useCases: 'Tea · Cooking · Export' },
     { name: 'Fresh Carrot', icon: '🥕', useCases: 'Salads · Juices · Baby food · Export' },
     { name: 'Fresh Beetroot', icon: '🍠', useCases: 'Salads · Juices · Colour · Export' },
-    { name: 'Fresh Spinach', icon: '🥬', useCases: 'Saag · Salads · Export' },
+   
   ],
   dehydrated: [
     { name: 'Turmeric Powder', icon: '🟡', useCases: 'Spice blends · Food manufacturing · Nutraceuticals' },
@@ -39,7 +39,7 @@ const PRODUCTS = {
     { name: 'Rose Powder', icon: '🌹', useCases: 'Cosmetics · Beverages · Wellness products' },
     { name: 'Curd Powder', icon: '🥛', useCases: 'Marinades · Ready meals · Dips · Seasoning' },
     { name: 'Bitter Gourd Powder', icon: '💚', useCases: 'Health supplements · Herbal products' },
-    { name: 'ABC Powder', icon: '🌈', useCases: 'Apple · Beetroot · Carrot – health drink blend' },
+    
   ],
   'ready-to-cook': [
     { name: 'Instant Biryani Mix', icon: '🍚', useCases: 'Ready meals · Food service · Retail' },
@@ -56,7 +56,7 @@ const PRODUCTS = {
     { name: 'Sambar Powder Pack', icon: '📦', useCases: 'Home cooking · Bulk · Export' },
     { name: 'Rasam Mix', icon: '🫕', useCases: 'Soups · Digestive · Export' },
     { name: 'Vada Mix', icon: '🥟', useCases: 'Snacks · Food service · Retail' },
-    { name: 'Idli Batter Mix', icon: '🍘', useCases: 'Breakfast · Fermented · Export' },
+    
   ],
 };
 
