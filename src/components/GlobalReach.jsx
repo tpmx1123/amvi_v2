@@ -1,13 +1,18 @@
 const MARKETS = [
-  { flag: '🇦🇪', name: 'UAE' },
-  { flag: '🇸🇦', name: 'KSA' },
-  { flag: '🇬🇧', name: 'UK' },
-  { flag: '🇺🇸', name: 'USA' },
-  { flag: '🇩🇪', name: 'Germany' },
-  { flag: '🇸🇬', name: 'Singapore' },
-  { flag: '🇦🇺', name: 'Australia' },
-  { flag: '🇯🇵', name: 'Japan' },
-  { flag: '🇨🇦', name: 'Canada' },
+  { code: 'ae', name: 'UAE' },
+  { code: 'sa', name: 'KSA' },
+  { code: 'gb', name: 'UK' },
+  { code: 'us', name: 'USA' },
+  { code: 'de', name: 'Germany' },
+  { code: 'sg', name: 'Singapore' },
+  { code: 'au', name: 'Australia' },
+  { code: 'jp', name: 'Japan' },
+  { code: 'ca', name: 'Canada' },
+  { code: 'in', name: 'India' },
+  { code: 'cn', name: 'China' },
+  { code: 'br', name: 'Brazil' },
+  
+  
 ];
 
 export default function GlobalReach() {
@@ -46,24 +51,19 @@ export default function GlobalReach() {
                 key={market.name}
                 className="group flex items-center gap-3 rounded-xl border border-primary/10 bg-white/80 backdrop-blur-sm px-4 py-3.5 shadow-sm transition-all duration-300 hover:border-accent-gold/40 hover:shadow-[0_12px_28px_rgba(26,60,58,0.12)] hover:-translate-y-0.5"
               >
-                <span className="text-2xl md:text-3xl transition-transform duration-300 group-hover:scale-110" aria-hidden>
-                  {market.flag}
-                </span>
+                {/* Image-based flags that work on Desktop/Windows */}
+                <img
+                  src={`https://flagcdn.com/${market.code}.svg`}
+                  alt={`${market.name} flag`}
+                  className="w-8 h-4 object-contain rounded-sm transition-transform duration-300 group-hover:scale-110 shadow-sm"
+                />
                 <span className="font-semibold text-primary text-sm md:text-base">
                   {market.name}
                 </span>
               </div>
             ))}
-            <div
-              className="group flex items-center gap-3 rounded-xl border border-primary/10 bg-primary/5 backdrop-blur-sm px-4 py-3.5 shadow-sm transition-all duration-300 hover:border-accent-gold/40 hover:shadow-[0_12px_28px_rgba(26,60,58,0.12)] hover:-translate-y-0.5 col-span-2 sm:col-span-1"
-            >
-              <span className="text-2xl md:text-3xl transition-transform duration-300 group-hover:scale-110" aria-hidden>
-                🌏
-              </span>
-              <span className="font-semibold text-primary text-sm md:text-base">
-                & More
-              </span>
-            </div>
+            
+            
           </div>
         </div>
       </div>

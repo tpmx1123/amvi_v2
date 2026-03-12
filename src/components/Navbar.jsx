@@ -42,7 +42,10 @@ export default function Navbar() {
         ${isScrolled ? 'py-2 bg-white backdrop-blur-xl border-b border-white/5' : 'py-10 bg-transparent'}`}
       >
         <div className=" mx-auto flex items-center justify-between ">
-         <a href="#home" className="relative z-[130] block transition-transform duration-500 hover:scale-105">
+         <a
+            href="#home"
+            className={`relative z-[130] block transition-all duration-500 hover:scale-105 ${isMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+          >
           <img src={LOGO_URL} alt="AMVI" className="h-10 md:h-14 w-auto " />
          </a>
 

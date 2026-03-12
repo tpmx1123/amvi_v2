@@ -1,10 +1,10 @@
 import React from 'react';
 
 const CERTIFICATIONS = [
-  { id: 'apeda', name: 'APEDA', alt: 'APEDA', logo: null },
-  { id: 'msme', name: 'MSME', alt: 'MSME - Micro, Small & Medium Enterprises', logo: null },
-  { id: 'fssai', name: 'FSSAI', alt: 'FSSAI', logo: null },
-  { id: 'tea-board', name: 'Tea Board India', alt: 'Tea Board India', logo: null },
+  { id: 'apeda', name: 'APEDA', alt: 'APEDA', logo: 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773316740/apeda_bccci1.png' },
+  { id: 'msme', name: 'MSME', alt: 'MSME - Micro, Small & Medium Enterprises', logo: 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773316896/MSME-1024x1024-1_ukmfo7.png' },
+  { id: 'fssai', name: 'FSSAI', alt: 'FSSAI', logo: 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773316895/fssai-seeklogo_jwhreq.png' },
+  { id: 'ISO', name: 'ISO 22000:2018', alt: 'ISO 22000:2018', logo: 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773317182/images-removebg-preview_sr025k.png' },
 ];
 
 const COPY = {
@@ -54,7 +54,7 @@ export default function OurCertification() {
               {items.map((cert, index) => (
                 <div
                   key={`${cert.id}-${index}`}
-                  className="certification-logo shrink-0 flex items-center justify-center w-36 md:w-44 h-24 md:h-28 rounded-xl border border-primary/10 bg-cream/50 px-4"
+                  className="certification-logo shrink-0 flex items-center justify-center w-36 md:w-44 h-24 md:h-28 rounded-xl  bg-cream/50 px-4"
                 >
                   {cert.logo ? (
                     <img
