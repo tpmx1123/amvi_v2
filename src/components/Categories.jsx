@@ -35,7 +35,7 @@ export default function Categories() {
       <div
         className="absolute top-0 right-0 w-1/2 md:w-full max-w-[280px] md:max-w-xl h-48 md:h-80 bg-no-repeat bg-contain bg-right-top pointer-events-none opacity-60 md:opacity-100"
         style={{
-          backgroundImage: `url(https://res.cloudinary.com/dhzhuobu2/image/upload/v1773315580/1048fbcec2d28ee44c26ee540b87f8bf-Photoroom_1_smjtzh.png)`,
+          backgroundImage: `url(https://res.cloudinary.com/dhzhuobu2/image/upload/v1773318467/1048fbcec2d28ee44c26ee540b87f8bf-Photoroom_1_lzdkqw.png)`,
         }}
         aria-hidden
       />
@@ -94,7 +94,7 @@ export default function Categories() {
                       key={feature}
                       className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-accent-gold"
                     >
-                      <span className="w-1 h-1 rounded-full bg-accent-gold" />
+                      <span className="w-1 h-1 rounded-full bg-primary" />
                       {feature}
                     </li>
                   ))}
