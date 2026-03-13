@@ -39,7 +39,7 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-[120] transition-all duration-700 px-6 md:px-16
-        ${isScrolled ? 'py-2 bg-white backdrop-blur-xl border-b border-white/5' : 'py-10 bg-transparent'}`}
+        ${isScrolled ? 'py-2 bg-white backdrop-blur-xl border-b border-white/5' : 'py-5 bg-transparent'}`}
       >
         <div className=" mx-auto flex items-center justify-between ">
          <a
