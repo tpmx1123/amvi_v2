@@ -103,7 +103,7 @@ export default function Navbar() {
                   group-hover:pl-4`}
                 >
                   <span className="flex items-baseline gap-4">
-                    <span className="text-[#C5A059] font-serif italic text-sm md:text-base">{i + 1}</span>
+                    
                     <span className="text-2xl md:text-xl font-serif tracking-tight group-hover:italic group-hover:text-[#C5A059] transition-all">
                       {link.label}
                     </span>
