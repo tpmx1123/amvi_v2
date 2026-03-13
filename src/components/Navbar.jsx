@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const LOGO_URL = 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1772605073/Screenshot_2026-03-04_114703-removebg-preview_exaaet.png';
+const LOGO_URL = 'https://res.cloudinary.com/dnvpasppl/image/upload/v1773392136/Screenshot_2026-03-04_114703-removebg-preview_a5xoie.png';
 const PHONE_TEL = '+919705922299';
 const EMAIL = 'amvifoods@gmail.com';
 
