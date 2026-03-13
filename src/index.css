@@ -69,6 +69,57 @@ h1, h2 {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Scroll-reveal: section animations when in view */
+@keyframes scroll-reveal-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scroll-reveal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.scroll-reveal {
+  opacity: 0;
+}
+.scroll-reveal.is-visible {
+  animation: scroll-reveal-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.scroll-reveal.scroll-reveal--fade.is-visible {
+  animation: scroll-reveal-fade 0.5s ease-out forwards;
+}
+
+/* Cinematic loader: AMVI letter reveal + curtain split */
+@keyframes cinematic-letter-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes cinematic-curtain-left {
+  to { transform: translateX(-100%); }
+}
+@keyframes cinematic-curtain-right {
+  to { transform: translateX(100%); }
+}
+
+.cinematic-loader {
+  --cinematic-bg: #0a1f1c;
+  background: var(--cinematic-bg);
+}
+.cinematic-letter {
+  opacity: 0;
+  animation: cinematic-letter-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.cinematic-letter:nth-child(1) { animation-delay: 0.1s; }
+.cinematic-letter:nth-child(2) { animation-delay: 0.22s; }
+.cinematic-letter:nth-child(3) { animation-delay: 0.34s; }
+.cinematic-letter:nth-child(4) { animation-delay: 0.46s; }
+
+.cinematic-curtain--open.cinematic-curtain--left {
+  animation: cinematic-curtain-left 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.cinematic-curtain--open.cinematic-curtain--right {
+  animation: cinematic-curtain-right 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 /* Our Process: step reveal and icon pop */
 @keyframes processStepReveal {
   from {

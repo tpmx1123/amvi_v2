@@ -1,6 +1,9 @@
 import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
+import ScrollReveal from './components/ScrollReveal';
+import CinematicLoader from './components/CinematicLoader';
 
+// Components
 const Hero = lazy(() => import('./components/Hero'));
 const About = lazy(() => import('./components/About'));
 const Categories = lazy(() => import('./components/Categories'));
@@ -14,55 +17,39 @@ const ProcessingCapacity = lazy(() => import('./components/ProcessingCapacity'))
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
+// Improved Fallback to prevent layout shift
 const SectionFallback = () => (
-  <div className="min-h-[30vh] flex items-center justify-center bg-[#fcfaf6]" aria-hidden="true">
-    <span className="text-secondary/30 text-sm">Loading…</span>
-  </div>
+  <div className="w-full h-[60vh] bg-[#091F15]/5 animate-pulse" aria-hidden="true" />
 );
 
 function App() {
   return (
-    <>
+    <CinematicLoader>
+      {/* Navbar is usually small, no need to lazy load it */}
       <Navbar />
+      
       <main>
+        {/* HERO: Loaded immediately with the Loader */}
         <Suspense fallback={<SectionFallback />}>
-          <Hero />
+           <Hero />
         </Suspense>
+
+        {/* REST OF THE SECTIONS: Wrapped in individual reveals */}
         <Suspense fallback={<SectionFallback />}>
-          <Why />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <Categories />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <HeroProduct />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <WhatWe />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <ProcessingCapacity />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <About />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <OurProcess />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <OurCertification />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <GlobalReach />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <Contact />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
+          <ScrollReveal><Why /></ScrollReveal>
+          <ScrollReveal><Categories /></ScrollReveal>
+          <ScrollReveal><HeroProduct /></ScrollReveal>
+          <ScrollReveal><WhatWe /></ScrollReveal>
+          <ScrollReveal><ProcessingCapacity /></ScrollReveal>
+          <ScrollReveal><About /></ScrollReveal>
+          <ScrollReveal><OurProcess /></ScrollReveal>
+          <ScrollReveal><OurCertification /></ScrollReveal>
+          <ScrollReveal><GlobalReach /></ScrollReveal>
+          <ScrollReveal><Contact /></ScrollReveal>
           <Footer />
         </Suspense>
       </main>
-    </>
+    </CinematicLoader>
   );
 }
 
