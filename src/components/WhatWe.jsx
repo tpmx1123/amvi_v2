@@ -32,7 +32,7 @@ export default function WhatWe() {
   return (
     <section
       id="priorities"
-      className="relative py-8 px-6 md:px-12 bg-[#FCFBFA] font-sans overflow-hidden"
+      className="relative py-20 md:py-24 px-6 md:px-12 bg-[#FCFBFA] font-sans overflow-hidden"
       style={{
         // We use a linear-gradient overlay ON TOP of the logo to reduce its opacity
         backgroundImage: `

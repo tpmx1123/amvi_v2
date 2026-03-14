@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-12 md:py-16 px-4 sm:px-6 md:px-10 overflow-hidden bg-[#7cc2c3] font-sans"
+      className="relative py-20 md:py-24 px-4 sm:px-6 md:px-10 overflow-hidden bg-[#7cc2c3] font-sans"
     >
       {/* Background image with low opacity */}
       <div

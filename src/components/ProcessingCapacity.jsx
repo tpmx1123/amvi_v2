@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 const IMAGE_URL =
-  'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773311601/Frame_1984078903_dsxos4.png';
+  'https://res.cloudinary.com/dnvpasppl/image/upload/v1773464893/Frame_1984078903_mkrgiy.png';
 
 export default function ProcessingCapacity() {
   const [imageInView, setImageInView] = useState(false);
@@ -24,7 +24,7 @@ export default function ProcessingCapacity() {
     <section
       ref={sectionRef}
       id="processing-capacity"
-      className="py-12 md:py-16 px-4 sm:px-6 md:px-10 overflow-hidden bg-cream/50 font-sans"
+      className="py-20 md:py-24 px-4 sm:px-6 md:px-10 overflow-hidden bg-cream/50 font-sans"
     >
       <div className="max-w-7xl mx-auto">
         {/* Desktop remains Grid | Mobile switches to Flex-Col */}
@@ -47,7 +47,7 @@ export default function ProcessingCapacity() {
 
             <blockquote
               className="text-secondary/90 text-base md:text-lg italic font-serif leading-relaxed mb-3"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "Montserrat" }}
             >
               &ldquo;Our assembly line processes over{' '}
               <span className="text-primary font-semibold not-italic">

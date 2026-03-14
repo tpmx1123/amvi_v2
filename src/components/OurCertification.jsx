@@ -20,7 +20,7 @@ export default function OurCertification() {
   return (
     <section
       id="our-certification"
-      className="py-12 md:py-16 px-4 sm:px-6 md:px-10 bg-white overflow-hidden"
+      className="py-20 md:py-24 px-4 sm:px-6 md:px-10 bg-white overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10 md:mb-14">

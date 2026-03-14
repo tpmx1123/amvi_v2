@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const LOGO_URL = 'https://res.cloudinary.com/dnvpasppl/image/upload/v1773392136/Screenshot_2026-03-04_114703-removebg-preview_a5xoie.png';
-const PHONE_TEL = '+919705922299';
+
 const EMAIL = 'info.amvifoods@gmail.com';
 
 const NAV_LINKS = [
@@ -74,7 +74,7 @@ export default function Navbar() {
 
       {/* FULL-SCREEN OVERLAY MENU */}
       <div 
-        className={`fixed inset-0 z-[110] bg-[#091F15] flex items-center justify-center overflow-hidden transition-all duration-1000 ease-in-out
+        className={`fixed inset-0 z-[110] bg-[#091F15] flex flex-col lg:flex-row lg:items-center lg:justify-center overflow-hidden transition-all duration-1000 ease-in-out
         ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         style={{
             clipPath: isMenuOpen ? 'circle(150% at 100% 0%)' : 'circle(0% at 100% 0%)'
@@ -91,14 +91,18 @@ export default function Navbar() {
              
         </div>
 
-        <div className="relative z-10 w-full max-w-4xl px-8 md:px-12 py-20 mt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-4 md:gap-y-8">
+        {/* Mobile: scrollable area with scrollbar. Desktop: centered, no scroll */}
+        <div
+          className="nav-menu-scroll relative z-10 w-full max-w-4xl px-8 md:px-12 py-10 mt-10 lg:mt-5 flex-1 min-h-0 overflow-y-auto overflow-x-hidden lg:overflow-visible lg:flex-none"
+          style={{ WebkitOverflowScrolling: 'touch' }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-2 md:gap-y-2">
             {NAV_LINKS.map((link, i) => (
               <div key={link.href} className="overflow-hidden border-b border-white/5 group">
                 <a 
                   href={link.href} 
                   onClick={closeMenu}
-                  className={`flex items-center justify-between    text-white transition-all duration-700 delay-[${i * 50}ms]
+                  className={`flex items-center justify-between py-3 text-white transition-all duration-700 delay-[${i * 50}ms] cursor-pointer touch-manipulation
                   ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-0 opacity-0'}
                   group-hover:pl-4`}
                 >

@@ -67,15 +67,7 @@ export default function Footer() {
             >
               +91 97059 22299
             </a>
-            <span className="text-white/40">·</span>
-            <a
-              href="https://amvifoods.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent-gold/90 font-medium no-underline hover:text-accent-gold transition-colors"
-            >
-              amvifoods.com
-            </a>
+           
             </div>
             {/* Social links */}
             <div className="flex items-center gap-3">

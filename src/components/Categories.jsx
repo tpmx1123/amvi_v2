@@ -29,7 +29,7 @@ export default function Categories() {
   return (
     <section
       id="categories"
-      className="relative py-12 px-5 md:px-10 overflow-hidden font-sans bg-[#FCFBFA]"
+      className="relative py-20 md:py-24 px-5 md:px-10 overflow-hidden font-sans bg-[#FCFBFA]"
     >
       {/* Background Accent - Responsive Scaling for Mobile */}
       <div

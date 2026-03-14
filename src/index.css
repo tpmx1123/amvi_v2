@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  @apply font-sans bg-bg text-secondary min-h-screen min-w-[320px] m-0;
+  @apply font-sans bg-bg text-secondary min-h-screen min-w-[320px] m-0 overflow-x-hidden;
 }
 
 h1, h2 {
@@ -314,6 +314,24 @@ h1, h2 {
 
 .capacity-image-visible .capacity-image {
   animation: capacity-image-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Navbar overlay menu – mobile scroll + scrollbar */
+@media (max-width: 1023px) {
+  .nav-menu-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  }
+  .nav-menu-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+  .nav-menu-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .nav-menu-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+  }
 }
 
 /* Navbar overlay menu – element animations */

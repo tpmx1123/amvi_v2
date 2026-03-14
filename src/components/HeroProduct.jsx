@@ -65,7 +65,7 @@ export default function HeroProduct() {
   const products = PRODUCTS[activeCategory] || [];
 
   return (
-    <section id="products" className="py-10 md:py-12 px-4 sm:px-6 md:px-10 overflow-hidden bg-cream font-sans">
+    <section id="products" className="py-20 md:py-24 px-4 sm:px-6 md:px-10 overflow-hidden bg-cream font-sans">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
