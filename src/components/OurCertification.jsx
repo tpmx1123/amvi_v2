@@ -1,10 +1,10 @@
 import React from 'react';
 
 const CERTIFICATIONS = [
-  { id: 'apeda', name: 'APEDA', alt: 'APEDA', logo: 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773316740/apeda_bccci1.png' },
-  { id: 'msme', name: 'MSME', alt: 'MSME - Micro, Small & Medium Enterprises', logo: 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773316896/MSME-1024x1024-1_ukmfo7.png' },
-  { id: 'fssai', name: 'FSSAI', alt: 'FSSAI', logo: 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773316895/fssai-seeklogo_jwhreq.png' },
-  { id: 'ISO', name: 'ISO 22000:2018', alt: 'ISO 22000:2018', logo: 'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773317182/images-removebg-preview_sr025k.png' },
+  { id: 'apeda', name: 'APEDA', alt: 'APEDA', logo: 'https://res.cloudinary.com/dnvpasppl/image/upload/v1773392136/apeda_zm0dka.png' },
+  { id: 'msme', name: 'MSME', alt: 'MSME - Micro, Small & Medium Enterprises', logo: 'https://res.cloudinary.com/dnvpasppl/image/upload/v1773466468/MSME-1024x1024-1-removebg-preview_w2jyvg.png' },
+  { id: 'fssai', name: 'FSSAI', alt: 'FSSAI', logo: 'https://res.cloudinary.com/dnvpasppl/image/upload/v1773392135/fssai-seeklogo_vkn96q.png' },
+  { id: 'ISO', name: 'ISO 22000:2018', alt: 'ISO 22000:2018', logo: 'https://res.cloudinary.com/dnvpasppl/image/upload/v1773392135/images-removebg-preview_ffecpl.png' },
 ];
 
 const COPY = {

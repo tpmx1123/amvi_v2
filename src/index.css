@@ -120,6 +120,16 @@ h1, h2 {
   animation: cinematic-curtain-right 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+/* Global Reach: staggered card reveal */
+.global-reach-card--hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.global-reach-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Our Process: step reveal and icon pop */
 @keyframes processStepReveal {
   from {

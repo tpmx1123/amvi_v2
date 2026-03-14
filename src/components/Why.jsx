@@ -17,7 +17,7 @@ const cards = [
 ];
 
 const BG_IMAGE =
-  'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773299965/Mask_group_q33d99.jpg';
+  'https://res.cloudinary.com/dnvpasppl/image/upload/v1773392136/Mask_group_fn5sm1.jpg';
 
 export default function Why() {
   return (

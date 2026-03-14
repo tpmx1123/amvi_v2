@@ -1,7 +1,7 @@
 import { ClipboardCheck, MapPin, ThermometerSnowflake, Package } from 'lucide-react';
 
 const BG_IMAGE =
-  'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773307296/a55847c61b4a25136ba80c4fc331cbbe-Photoroom_2_vip7fo.png';
+  'https://res.cloudinary.com/dnvpasppl/image/upload/v1773391882/a55847c61b4a25136ba80c4fc331cbbe-Photoroom_2_ik4ojr.png';
 
 
 

@@ -1,9 +1,9 @@
 // Set your About section image URL here (right column)
 const ABOUT_IMAGE_URL =
-  'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773048242/unnamed_e3ru2d.jpg';
+  'https://res.cloudinary.com/dnvpasppl/image/upload/v1773466171/xaad77nrj1rmy0cwxb8t2rbv1w_qmamil.png';
 
 const ABOUT_BG_IMAGE_URL =
-  'https://res.cloudinary.com/dhzhuobu2/image/upload/v1773309931/Screenshot_2026-03-12_153452_r16qlg.png';
+  'https://res.cloudinary.com/dnvpasppl/image/upload/v1773466384/Screenshot_2026-03-12_153452_r16qlg_ez7bkx.png';
 
 const stats = [
   { value: '1 TON+/hr', label: 'Processing Capacity' },

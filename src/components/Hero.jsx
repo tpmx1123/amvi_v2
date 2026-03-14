@@ -1,5 +1,5 @@
 const HERO_BG =
-  'https://i.pinimg.com/1200x/c5/c9/4e/c5c94e59aa8fd075e78c640c6e5e1533.jpg';
+  'https://res.cloudinary.com/dnvpasppl/image/upload/v1773465704/ps20n6wq6srmy0cwxb4sa7vfhc_irsqeu.png';
 
 export default function Hero() {
   return (

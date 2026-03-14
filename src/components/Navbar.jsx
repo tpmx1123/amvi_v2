@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 
 const LOGO_URL = 'https://res.cloudinary.com/dnvpasppl/image/upload/v1773392136/Screenshot_2026-03-04_114703-removebg-preview_a5xoie.png';
 const PHONE_TEL = '+919705922299';
-const EMAIL = 'amvifoods@gmail.com';
+const EMAIL = 'info.amvifoods@gmail.com';
 
 const NAV_LINKS = [
   { href: '#about', label: 'The Heritage' },
   { href: '#categories', label: 'Our Collections' },
-  { href: '#products', label: 'Artisanal Range' },
+  { href: '#products', label: 'our Products' },
   { href: '#our-process', label: 'The Process' },
   { href: '#global-reach', label: 'Global Export' },
   { href: '#why', label: 'Why Amvi' },
@@ -128,11 +128,30 @@ export default function Navbar() {
                 </a>
              </div>
              <div className="flex gap-10">
-                {['INSTAGRAM', 'LINKEDIN', 'FACEBOOK'].map(social => (
-                  <span key={social} className="text-white/40 text-[10px] tracking-[0.3em] font-bold hover:text-[#C5A059] cursor-pointer transition-colors">
-                    {social}
-                  </span>
-                ))}
+                <a
+                  href="https://www.instagram.com/amvi_foods/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/40 text-[10px] tracking-[0.3em] font-bold hover:text-[#C5A059] transition-colors"
+                >
+                  INSTAGRAM
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61579465403341"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/40 text-[10px] tracking-[0.3em] font-bold hover:text-[#C5A059] transition-colors"
+                >
+                  FACEBOOK
+                </a>
+                <a
+                  href="https://x.com/Amvi_Foods"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/40 text-[10px] tracking-[0.3em] font-bold hover:text-[#C5A059] transition-colors"
+                >
+                  X
+                </a>
              </div>
           </div>
         </div>

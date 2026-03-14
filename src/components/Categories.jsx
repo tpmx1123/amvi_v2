@@ -5,7 +5,7 @@ const CATEGORIES = [
     title: 'Fresh Vegetables',
     desc: 'Farm-fresh vegetables carefully selected and packaged to maintain peak freshness during international shipping.',
     features: ['Seasonal produce', 'Temperature-controlled shipping', 'Direct from farms'],
-    image: 'https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://res.cloudinary.com/dnvpasppl/image/upload/v1773466840/pexels-photo-1300972_lx26w3.jpg',
   },
   {
     id: 'dehydrated',
@@ -13,7 +13,7 @@ const CATEGORIES = [
     title: 'Dehydrated Powders',
     desc: 'Premium vegetables, fruits, leaves, and flowers processed to retain maximum nutrition and flavour.',
     features: ['Vegetables & Fruits', 'Leaves & Flowers', 'Extended shelf life'],
-    image: 'https://i.pinimg.com/1200x/99/e6/67/99e667e82e579f07fec436c6126fb028.jpg',
+    image: 'https://res.cloudinary.com/dnvpasppl/image/upload/v1773466839/99e667e82e579f07fec436c6126fb028_d7txm0.jpg',
   },
   {
     id: 'rtc',
@@ -21,7 +21,7 @@ const CATEGORIES = [
     title: 'Ready to Cook',
     desc: 'Convenient instant mixes for traditional dishes — authentic Indian flavours made easy.',
     features: ['Instant Biryani', 'Instant Sambar', 'Instant Chutney'],
-    image: 'https://i.pinimg.com/736x/eb/3e/d7/eb3ed7087b887b902722e6dcdac216b6.jpg',
+    image: 'https://res.cloudinary.com/dnvpasppl/image/upload/v1773466839/eb3ed7087b887b902722e6dcdac216b6_v2bv40.jpg',
   },
 ];
 
