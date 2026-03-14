@@ -5,7 +5,7 @@ const contactBlocks = [
   { emoji: '👤', label: 'Contact Person', value: 'Hemanth Nalla', href: PHONE_TEL },
   { emoji: null, label: 'WhatsApp', value: '+91 97059 22299', href: 'https://wa.me/919705922299', isWhatsApp: true },
   { emoji: '✉️', label: 'Email', value: 'info.amvifoods@gmail.com', href: 'mailto:info.amvifoods@gmail.com' },
-  { emoji: '📍', label: 'Location', value: 'Konaseema, Andhra Pradesh, India', href: 'https://maps.google.com' },
+  { emoji: '📍', label: 'Location', value: 'Konaseema, Andhra Pradesh, India', href: 'https://maps.app.goo.gl/u7Nkhe6CsUaAcMgT9' },
 ];
 
 const FORMSUBMIT_AJAX_URL = 'https://formsubmit.co/ajax/info.amvifoods@gmail.com';
@@ -139,7 +139,13 @@ export default function Contact() {
                 )}
                 <div className="min-w-0">
                   <div className="text-xs font-bold uppercase tracking-wider text-secondary/70 font-montserrat">{block.label}</div>
-                  <a href={block.href} className="text-sm md:text-base font-medium text-secondary hover:text-primary transition-colors block">{block.value}</a>
+                  <a
+                    href={block.href}
+                    {...(block.href.startsWith('http') && { target: '_blank', rel: 'noopener noreferrer' })}
+                    className="text-sm md:text-base font-medium text-secondary hover:text-primary transition-colors block"
+                  >
+                    {block.value}
+                  </a>
                 </div>
               </div>
             ))}

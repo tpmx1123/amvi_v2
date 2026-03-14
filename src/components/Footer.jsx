@@ -47,7 +47,14 @@ export default function Footer() {
             <div className="flex flex-wrap items-center gap-2 text-sm">
               <span className="font-serif text-white font-bold tracking-tight">Purely Healthy</span>
               <span className="text-white/50 hidden sm:inline">·</span>
-              <span className="text-white/80">Konaseema, Andhra Pradesh, India</span>
+              <a
+                href="https://maps.app.goo.gl/u7Nkhe6CsUaAcMgT9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-accent-gold transition-colors no-underline"
+              >
+                Konaseema, Andhra Pradesh, India
+              </a>
             </div>
           </div>
 
